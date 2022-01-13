@@ -12,7 +12,7 @@ model = torch.nn.Sequential(
 
 docs = DocumentArray.empty(10)
 docs.blobs = np.random.random([10, 128]).astype(np.float32)
-# Answer: docs.embed(model)
+# Answer: da.embed(model)
 ...
 
 assert docs.embeddings.shape == (10, 32)
