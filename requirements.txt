@@ -1,1 +1,1 @@
-docarray[full]
+docarray[full]~=0.1.6
