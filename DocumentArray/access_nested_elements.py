@@ -40,17 +40,21 @@ for i in range(NUM_DOCS):
     da.append(d)
 
 # select all the chunks of chunks
-selected = da['@cc']
+# Answer: selected = da['@cc']
+selected = ...
 assert len(selected) == NUM_DOCS*NUM_CHUNKS*NUM_CHUNKS_OF_CHUNK
 
 # select all the chunks of chunks and matches
-selected = da['@cc,m']
+# Answer: selected = da['@cc,m']
+selected = ...
 assert len(selected) == NUM_DOCS*(NUM_CHUNKS*NUM_CHUNKS_OF_CHUNK + NUM_MATCHES)
 
 # select all the root Documents and matches
-selected = da['@r,m']
+# Answer: selected = da['@r,m']
+selected = ...
 assert len(selected) == NUM_DOCS + NUM_DOCS*NUM_MATCHES
 
 # flatten the nested Document
-selected = da[...]
+# Answer: selected = da[...]
+selected = ...
 assert len(selected) == NUM_DOCS*(NUM_CHUNKS*NUM_CHUNKS_OF_CHUNK + NUM_CHUNKS + NUM_MATCHES) + NUM_DOCS
