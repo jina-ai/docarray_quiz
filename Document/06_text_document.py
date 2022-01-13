@@ -3,7 +3,7 @@ import numpy as np
 
 
 # load text from uri
-d = Document(uri='construct_attribute.py')
+d = Document(uri='01_construct_attribute.py')
 # Answer: d.load_uri_to_text()
 ...
 assert len(d.text) > 0
