@@ -8,34 +8,28 @@ d = Document(
 d.plot()
 
 # save the image to 'jina.png'
-# Answer: d.save_uri_to_file('jina.png')
-...
+d.save_uri_to_file('jina.png')
 assert os.path.isfile('jina.png')
 
 # load image from uri
 d = Document(uri='./jina.png')
-# Answer: d.load_uri_to_image_blob()
-...
+d.load_uri_to_image_blob()
 assert d.blob.shape == (146, 344, 3)
 
 # save the image blob to 'jina.jpg'
-# Answer: d.save_image_blob_to_file('jina.jpg')
-...
+d.save_image_blob_to_file('jina.jpg')
 assert os.path.isfile('jina.jpg')
 
 # change the image size to (20, 20)
-# Answer: d.set_image_blob_shape(shape=(20, 20))
-...
+d.set_image_blob_shape(shape=(20, 20))
 assert d.blob.shape == (20, 20, 3)
 
 # create chunks by using a sliding window of shape (10, 10) with strides=(5, 5)
-# Answer: d.convert_image_blob_to_sliding_windows(window_shape=(10, 10), strides=(5, 5), as_chunks=True)
-...
+d.convert_image_blob_to_sliding_windows(window_shape=(10, 10), strides=(5, 5), as_chunks=True)
 assert len(d.chunks) == 9
 assert d.chunks[0].blob.shape == (10, 10, 3)
 
 # set the color channel from HWC to CHW
-# Answer: d.set_image_blob_channel_axis(-1, 0)
-...
+d.set_image_blob_channel_axis(-1, 0)
 assert d.blob.shape == (3, 20, 20)
 

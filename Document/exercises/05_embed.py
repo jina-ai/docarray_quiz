@@ -13,6 +13,5 @@ model = torch.nn.Sequential(
 d = Document(blob=np.random.rand(128).astype(np.float32))
 
 # calculate the embedding
-# Answer: d.embed(model)
-d.embed(model)
+...
 assert d.embedding.shape == (32,)
