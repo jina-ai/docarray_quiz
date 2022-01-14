@@ -8,9 +8,7 @@ da = DocumentArray([Document(uri=uri) for _ in range(1000)])
 da.embeddings = np.random.random([len(da), 128])
 
 # plot all the images in da and save it to `jina.jpg`
-# Answer: da.plot_image_sprites('jina.jpg')
 ...
 
 # plot the embeddings with spirit
-# Answer: da.plot_embeddings(image_sprites=True)
 ...
