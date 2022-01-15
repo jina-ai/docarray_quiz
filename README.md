@@ -15,7 +15,7 @@ pip install -r requirements.txt
 ```
 
 ## Learning Resources 
-- [Jina's Learning Bootcamp](learn.jina.ai)
+- [Jina's Learning Bootcamp](https://learn.jina.ai/)
 - [DocArray Documentation](https://docarray.jina.ai/)
 
 
