@@ -13,13 +13,13 @@ assert d.id == 'j_1024'
 d = ...
 assert d.text == 'hello, jina'
 
-# construct a Document with a blob [1, 2, 3]
+# construct a Document with a tensor [1, 2, 3]
 d = ...
-assert d.blob == [1, 2, 3]
+assert d.tensor == [1, 2, 3]
 
-# construct a Document with buffer b`123`
+# construct a Document with blob b`123`
 d = ...
-assert d.buffer == b'hello, jina'
+assert d.blob == b'hello, jina'
 
 # construct a Document with text 'hello, jina' and a blob [1, 2, 3]
 # d = Document(text='hello, jina', blob=[1, 2, 3])

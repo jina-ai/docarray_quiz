@@ -14,12 +14,12 @@ d = Document(text='hello, jina')
 assert d.text == 'hello, jina'
 
 # construct a Document with a blob [1, 2, 3]
-d = Document(blob=[1, 2, 3])
-assert d.blob == [1, 2, 3]
+d = Document(tensor=[1, 2, 3])
+assert d.tensor == [1, 2, 3]
 
 # construct a Document with buffer b`123`
-d = Document(buffer=b'hello, jina')
-assert d.buffer == b'hello, jina'
+d = Document(blob=b'hello, jina')
+assert d.blob == b'hello, jina'
 
 # construct a Document with text 'hello, jina' and a blob [1, 2, 3]
 # d = Document(text='hello, jina', blob=[1, 2, 3])

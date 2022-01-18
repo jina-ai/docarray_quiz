@@ -11,5 +11,5 @@ if not os.path.isfile(fn):
 d = Document(uri=fn)
 # load the 3D model mesh to blob with 1000 sample points
 ...
-assert d.blob.shape == (1000, 3)
-print(d.blob.shape)
+assert d.tensor.shape == (1000, 3)
+print(d.tensor.shape)

@@ -13,23 +13,23 @@ assert os.path.isfile('jina.png')
 
 # load image from uri
 d = Document(uri='./jina.png')
-d.load_uri_to_image_blob()
-assert d.blob.shape == (146, 344, 3)
+d.load_uri_to_image_tensor()
+assert d.tensor.shape == (146, 344, 3)
 
 # save the image blob to 'jina.jpg'
-d.save_image_blob_to_file('jina.jpg')
+d.save_image_tensor_to_file('jina.jpg')
 assert os.path.isfile('jina.jpg')
 
 # change the image size to (20, 20)
-d.set_image_blob_shape(shape=(20, 20))
-assert d.blob.shape == (20, 20, 3)
+d.set_image_tensor_shape(shape=(20, 20))
+assert d.tensor.shape == (20, 20, 3)
 
 # create chunks by using a sliding window of shape (10, 10) with strides=(5, 5)
-d.convert_image_blob_to_sliding_windows(window_shape=(10, 10), strides=(5, 5), as_chunks=True)
+d.convert_image_tensor_to_sliding_windows(window_shape=(10, 10), strides=(5, 5), as_chunks=True)
 assert len(d.chunks) == 9
-assert d.chunks[0].blob.shape == (10, 10, 3)
+assert d.chunks[0].tensor.shape == (10, 10, 3)
 
 # set the color channel from HWC to CHW
-d.set_image_blob_channel_axis(-1, 0)
-assert d.blob.shape == (3, 20, 20)
+d.set_image_tensor_channel_axis(-1, 0)
+assert d.tensor.shape == (3, 20, 20)
 

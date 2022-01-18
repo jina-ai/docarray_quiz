@@ -12,4 +12,4 @@ d = Document(uri=fn)
 
 # load the uri into blob
 ...
-assert len(d.blob.shape) == 2
+assert len(d.tensor.shape) == 2

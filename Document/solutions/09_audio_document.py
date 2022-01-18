@@ -11,5 +11,5 @@ if not os.path.isfile(fn):
 d = Document(uri=fn)
 
 # load the uri into blob
-d.load_uri_to_audio_blob()
-assert len(d.blob.shape) == 2
+d.load_uri_to_audio_tensor()
+assert len(d.tensor.shape) == 2

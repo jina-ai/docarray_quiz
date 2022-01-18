@@ -2,7 +2,7 @@ from docarray import Document
 
 # construct a Document with granularity=2 and adjacency=3
 # Answer: d = Document(granularity=2, adjacency=3)
-d = ...
+d = Document(granularity=2, adjacency=3)
 assert d.granularity == 2 and d.adjacency == 3
 
 # construct a Document with 2 chunks and each chunk has 3 chunks
